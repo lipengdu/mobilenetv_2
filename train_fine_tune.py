@@ -56,8 +56,7 @@ callbacks_list = callbacks.make_callbacks(weights_file)
 
 print('Compile model')  #模型编译
 
-#opt = SGD(momentum=.9) #动量
-opt=Adam(learning_rate=0.01,beta_1=0.9,amsgrad=True)
+opt=Adam(learning_rate=0.01,beta_1=0.99,amsgrad=True)
 model.compile(  #编译
     loss='categorical_crossentropy',  #交叉熵分类损失
     optimizer=opt,
