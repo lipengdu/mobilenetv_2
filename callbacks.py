@@ -6,21 +6,20 @@ def schedule(epoch):
     if epoch < 6:
         # Warmup model first
         return .0000032
-    elif epoch < 12:
+    elif epoch < 10:
         return .01
-    elif epoch < 20:
+    elif epoch < 18:
         return .002
-    elif epoch < 40:
+    elif epoch < 32:
         return .0004
-    elif epoch < 60:
+    elif epoch < 54:
         return .00008
-    elif epoch < 80:
+    elif epoch < 74:
         return .000016
-    elif epoch < 95:
+    elif epoch < 85:
         return .0000032        
     else:
-        return .0000009
-
+        return .0000007
 
 def make_callbacks(weights_file): #回调函数
     # checkpoint
