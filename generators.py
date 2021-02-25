@@ -8,11 +8,11 @@ import constants
 train_datagen = ImageDataGenerator(   #数据增强
     rescale=1./255,
     rotation_range=30, #旋转范围
-    width_shift_range=0.2, #宽度转移范围
+    width_shift_range=0.3, #宽度转移范围
     height_shift_range=0.2, #高度旋转范围
-    shear_range=0.2, #剪切范围
-    zoom_range=0.2, #缩放范围
-    channel_shift_range=20, #通道旋转范围
+    shear_range=0.3, #剪切范围
+    zoom_range=0.3, #缩放范围
+    channel_shift_range=30, #通道旋转范围
     horizontal_flip=True, #水平线
     fill_mode='nearest', #
 )
